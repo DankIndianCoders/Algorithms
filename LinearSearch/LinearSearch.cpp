@@ -23,4 +23,5 @@ int main(){
     else //just print the postion of the element in the array.
     cout<<"\nThe element is present at location: "<<res;
     return 0;
+    
 }
