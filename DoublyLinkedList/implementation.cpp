@@ -7,49 +7,26 @@
 |_|_\___/_||_\__,_|_||_|_| |_/__/__|                                                       
 */
 #include<bits/stdc++.h>
-typedef int int32_t;
-#define int         long long int
-#define LOOP(i,n)   for (int i = 1; i <= n; i++)
-#define loop(i,n)   for(int i = 0;i<n;i++)
-#define REP(i,a,b)  for(int i = a;i<=b;i++)
-#define INF         1000000000
-#define mod         1000000007
-#define pb          push_back
-#define ff          first
-#define ss          second
-#define ii          pair<int,int>
-#define vi          vector<int>
-#define vvi         vector<vi>
-#define vii         vector<ii>
-
-#define szv(V)      ((int)(V).size())
-#define allv(V)     (V).begin(), (V).end()
-#define sortv(V)    sort(allv(V));
-#define debug       cout<<"debugged here"<<endl;
-
-#define endl        '\n'
-#define X           real()
-#define Y           imag()
-#define tup         tuple<int,int,int>
-#define graphType   vector<vector<tup>>
-#define zt(x)       get<0>(x)
-#define ot(x)       get<1>(x)
-#define tt(x)       get<2>(x)
-//oprations
-#define isPowerOf2(x) (x && ceil(log2(x))==floor(log2(x)))
-#define dotp(a,b)   ( (conj(a)*(b)).real() )	// a*b cos(T), if zero -> prep
-#define crossp(a,b) ( (conj(a)*(b)).imag() )	// a*b sin(T), if zero -> parllel
-#define firstSetBit(n) ( (log2(n & -n) + 1)   )
-//
-const double EPS = (1e-7);
+#define LOOP(i,n) for (int i = 1; i <= n; i++)
+#define loop(i,n) for(int i = 0;i<n;i++)
+#define REP(i,a,b) for(int i = a;i<=b;i++)
+#define lli long long int
+#define mod 1000000007
+#define pb push_back
+#define ff first
+#define ss second
+#define ii pair<int,int>
+#define vi vector<int>
+#define vvi vector<vi>
+#define vii vector<ii>
+#define vlli vector<lli>
+#define INF 1000000000
+#define endl '\n'
 const double PI = 3.141592653589793238460;
-typedef std::complex<double> point;
-typedef std::valarray<point> CArray;
+typedef std::complex<double> Complex;
+typedef std::valarray<Complex> CArray;
     
 using namespace std;
-int __lcm(int a,int b) {return a*b/__gcd(a,b);}
-int dcmp(double x, double y) {	return fabs(x-y) <= EPS ? 0 : x < y ? -1 : 1;	}
-
 class Node{
     public:
     int data = 0;
@@ -212,8 +189,20 @@ class doublyLinkedList{
 };
 
 
-
-int32_t main(){
-//     ios::sync_with_stdio(0); cin.tie(0);
-    
+int main(){
+    doublyLinkedList dll;
+    for(int i = 1;i<=9;i++){
+        dll.addLast(i*10);
+    }
+    for(int i = 10;i<=20;i++){
+        dll.addFirst(i*10);
+    }
+    cout<<dll.toString()<<dll.size()<<endl;
+    dll.removeFirst();
+    cout<<dll.toString()<<dll.size()<<endl;
+    dll.removeLast();
+    cout<<dll.toString()<<dll.size()<<endl;
+    dll.removeAt(2);
+    cout<<dll.toString()<<dll.size()<<endl;
+    cout<<dll.getAt(dll.size()-1)->data<<endl;
 }
