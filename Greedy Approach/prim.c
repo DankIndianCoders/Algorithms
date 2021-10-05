@@ -1,12 +1,4 @@
-/**
- * @file
- * @author [Timothy Maloney](https://github.com/sl1mb0)
- * @brief [Prim's algorithm](https://en.wikipedia.org/wiki/Prim%27s_algorithm)
- * implementation in C to find the MST of a weighted, connected graph.
- * @details Prim's algorithm uses a greedy approach to generate the MST of a weighted connected graph.
- * The algorithm begins at an arbitrary vertex v, and selects a next vertex u, 
- * where v and u are connected by a weighted edge whose weight is the minimum of all edges connected to v. 
- * @references Page 319 "Introduction to the Design and Analysis of Algorithms" - Anany Levitin
+
  *
  * To test - run './prim -test'
  * prim() will find the MST of the following adj. matrix:
